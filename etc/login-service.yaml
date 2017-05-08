@@ -1,0 +1,41 @@
+cookiedomain: .mycorp.io
+tokenttl: 20h
+defaulttokenprovider: simple
+loginsessionttl: 5m
+allowedredirectdomain: .mycorp.io
+tokenaeskey: BASE64_AES_KEY
+tokenecprivatekey: BASE64_ECDSA_KEY
+tokengeneration: 1
+oauth:
+  clientid: xxxx.apps.googleusercontent.com
+  clientsecret: MY_SECRET_HERE
+  callbackurl: https://login.mycorp.io/login/oauth2/callback
+serviceaccount:
+  email: xxxx@yyyyy.iam.gserviceaccount.com
+  impersonateadmin: my-admin@mycorp.io
+  privatekey: |
+    -----BEGIN PRIVATE KEY-----
+    ...
+    -----END PRIVATE KEY-----
+u2f:
+  appid: https://login.mycorp.io
+  trustedfacets:
+    - https://login.mycorp.io
+  storepath: /srv/login-service/u2f/%s.gob
+defaultgrouppassthroughdelimiter: ","
+domains:
+  index.mycorp.io:
+    description: This index page
+    group: all@mycorp.io
+    downstream: http://[::1]:9092
+    grouppassthroughfilter: .*
+  test.mycorp.io:
+    description: Test and stuff
+    group: access-test@mycorp.io
+    downstream: http://[::1]:8080/test.html
+    grouppassthroughfilter: access-test.*
+    grouppassthroughdelimiter: ";"
+  lunchmenu.mycorp.io:
+    description: Company lunch menu
+    group: access-lunch@mycorp.io
+    downstream: http://[::1]:8080/menu.html
