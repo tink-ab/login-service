@@ -1,0 +1,13 @@
+/login-service
+ecdsa-gen
+.*.swp
+.*.swo
+login-service.yaml
+obj-x86_64-linux-gnu/
+debian/debhelper-build-stamp
+debian/files
+debian/login-service.debhelper.log
+debian/login-service.postinst.debhelper
+debian/login-service.postrm.debhelper
+debian/login-service.prerm.debhelper
+debian/login-service.substvars

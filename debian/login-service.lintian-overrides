@@ -1,0 +1,1 @@
+login-service binary: embedded-library usr/bin/login-service: libyaml

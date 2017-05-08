@@ -1,0 +1,3 @@
+cmd/login-service/static/ usr/share/login-service
+cmd/login-service/templates/ usr/share/login-service
+etc/login-service.yaml etc

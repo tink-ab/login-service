@@ -1,0 +1,11 @@
+tink-login-service (0.2-1ubuntu1~2.gbp4eb1be) UNRELEASED; urgency=medium
+
+  * Major release.
+
+ -- Christian Svensson <christian.svensson@tink.se>  Fri, 13 Jan 2017 14:07:08 +0100
+
+tink-login-service (0.1-1ubuntu1~2.gbp4eb1be) UNRELEASED; urgency=medium
+
+  * Initial release.
+
+ -- Christian Svensson <christian.svensson@tink.se>  Wed, 30 Nov 2016 18:07:08 +0100

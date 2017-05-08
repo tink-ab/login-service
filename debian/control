@@ -1,0 +1,21 @@
+Source: tink-login-service
+Section: net
+Priority: extra
+Maintainer: Tink AB <support@tink.se>
+Build-Depends: debhelper (>= 9.0.0),
+               dh-golang,
+               dh-systemd,
+               golang-pq-dev,
+               golang-go,
+               golang-godebiancontrol-dev,
+               golang-codesearch-dev
+Standards-Version: 3.9.7
+Vcs-Git: https://github.com/tink-ab/tink-login-service.git
+Vcs-Browser: https://github.com/tink-ab/tink-login-service
+
+Package: login-service
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, adduser
+Built-Using: ${misc:Built-Using}
+Description: Debian Code Search
+ Server binaries, tools and templates/static assets to run Debian Code Search.

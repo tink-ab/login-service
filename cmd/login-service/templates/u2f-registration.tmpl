@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="/js/jquery-3.1.1.min.js"></script>
+<script src="/js/u2f-api.js"></script>
+<script src="/js/u2f.js"></script>
+<link rel="stylesheet" href="/css/style.css">
+<title>U2F Registration</title>
+</head>
+<body state="{{ .state }}">
+<div id="main">
+<div id="wrapper">
+<div id="left">
+<h1>Welcome</h1>
+<p>Hi there {{ .name }}!</p>
+<p>It looks like your first time here. You need to register a security key
+in order to continue. This is a device you will need to sign in to all the
+protected services.</p>
+<p><b>Insert and touch the security key you wish to register.</b></p>
+</div>
+<div id="right">
+<img src="/img/press2.jpg" width="300" style="border-radius: 25px" alt="Hand pressing security key. Source: Yubico">
+</div>
+</div>
+</div>
+<script>
+$(register);
+</script>
+</body>
+</html>

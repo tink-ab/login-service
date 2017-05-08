@@ -1,0 +1,16 @@
+[Unit]
+Description=Login Service
+After=network.target
+Before=nginx.target
+
+[Service]
+User=login-service
+Type=simple
+Environment=GIN_MODE=release
+ExecStart=/usr/bin/login-service -config /etc/login-service.yaml \
+  -static-dir /usr/share/login-service/static \
+  -templates-dir /usr/share/login-service/templates
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/css/style.css">
+<title>Login Error</title>
+</head>
+<body>
+<div id="main">
+<div id="wrapper">
+<div id="left">
+{{ if .unauthorized }}
+
+<h1>Give me one more chance!</h1>
+<p>
+It seems I forgot where we were, please retry the request and I'll hopefully
+do better this time.
+</p>
+
+{{ else if .forbidden }}
+
+<h1>Sorry</h1>
+<p>
+It looks like you're not allowed to access this resource.
+</p>
+
+{{ else }}
+
+<h1>Oops!</h1>
+<p>
+Something went wrong. Please retry the thing you were doing. If this error persists
+please report it to your friendly platforms team.</p>
+
+{{ end }}
+<p>
+The first error reported was: <code>{{ .error }}</code>
+</p>
+</div>
+<div id="right">
+{{ if .unauthorized }}
+<img src="/img/error.svg" width="300">
+{{ else if .forbidden }}
+<img src="/img/denied.svg" width="300">
+{{ end }}
+</div>
+</div>
+</div>
+</body>
+</html>
