@@ -16,8 +16,8 @@
 package provider
 
 import (
-	"github.com/tink-ab/tink-login-service/context"
-	"github.com/tink-ab/tink-login-service/session"
+	"github.com/tink-ab/login-service/context"
+	"github.com/tink-ab/login-service/session"
 )
 
 type SuccesCallback func(context.Context, *session.LoginSession)

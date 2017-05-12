@@ -34,10 +34,10 @@ import (
 	"gopkg.in/yaml.v2"
 
 	"github.com/gin-gonic/gin"
-	"github.com/tink-ab/tink-login-service/context"
-	"github.com/tink-ab/tink-login-service/provider"
-	"github.com/tink-ab/tink-login-service/session"
-	"github.com/tink-ab/tink-login-service/token"
+	"github.com/tink-ab/login-service/context"
+	"github.com/tink-ab/login-service/provider"
+	"github.com/tink-ab/login-service/session"
+	"github.com/tink-ab/login-service/token"
 )
 
 var config = flag.String("config", "login-service.yaml", "Configuration file to load")
