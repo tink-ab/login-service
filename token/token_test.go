@@ -24,7 +24,7 @@ import (
 	"time"
 
 	"github.com/stretchr/testify/assert"
-	"github.com/tink-ab/tink-login-service/session"
+	"github.com/tink-ab/login-service/session"
 )
 
 type FakeCrypto struct{}

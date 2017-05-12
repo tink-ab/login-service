@@ -21,7 +21,7 @@ import (
 	log "github.com/Sirupsen/logrus"
 	"time"
 
-	"github.com/tink-ab/tink-login-service/session"
+	"github.com/tink-ab/login-service/session"
 )
 
 type Minter struct {

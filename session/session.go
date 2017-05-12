@@ -27,7 +27,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/tink-ab/tink-login-service/context"
+	"github.com/tink-ab/login-service/context"
 )
 
 type LoginSession struct {

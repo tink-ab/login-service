@@ -15,10 +15,10 @@
 #
 
 login-service: $(wildcard cmd/login-service/*.go) $(wildcard **/*.go) $(wildcard *.go)
-	go build -o $@ github.com/tink-ab/tink-login-service/cmd/$@
+	go build -o $@ github.com/tink-ab/login-service/cmd/$@
 
 ecdsa-gen: $(wildcard cmd/ecdsa-gen/*.go)
-	go build -o $@ github.com/tink-ab/tink-login-service/cmd/$@
+	go build -o $@ github.com/tink-ab/login-service/cmd/$@
 
 install-share:
 	mkdir -p $(DESTDIR)/usr/share/login-service

@@ -20,8 +20,8 @@ import (
 	log "github.com/Sirupsen/logrus"
 	"net/http"
 
-	"github.com/tink-ab/tink-login-service/context"
-	"github.com/tink-ab/tink-login-service/session"
+	"github.com/tink-ab/login-service/context"
+	"github.com/tink-ab/login-service/session"
 	"github.com/tstranex/u2f"
 )
 

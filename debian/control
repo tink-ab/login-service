@@ -1,4 +1,4 @@
-Source: tink-login-service
+Source: login-service
 Section: net
 Priority: extra
 Maintainer: Tink AB <support@tink.se>
@@ -10,8 +10,8 @@ Build-Depends: debhelper (>= 9.0.0),
                golang-godebiancontrol-dev,
                golang-codesearch-dev
 Standards-Version: 3.9.7
-Vcs-Git: https://github.com/tink-ab/tink-login-service.git
-Vcs-Browser: https://github.com/tink-ab/tink-login-service
+Vcs-Git: https://github.com/tink-ab/login-service.git
+Vcs-Browser: https://github.com/tink-ab/login-service
 
 Package: login-service
 Architecture: any
