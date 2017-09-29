@@ -1,5 +1,5 @@
 /login-service
-ecdsa-gen
+/ecdsa-gen
 .*.swp
 .*.swo
 login-service.yaml
