@@ -29,6 +29,13 @@ function registered(resp) {
 function register() {
   var state = $('body').attr('state');
   $.getJSON('/login/u2f/register/request?state=' + state).done(function(req) {
+    // Chrome changed the default behaviour of u2f.register in Chrome 66.
+    // attestation = direct is required to sign this request by the physical device
+    // otherwise Chrome will issue a self-signed certificate to sign the request with.
+    //
+    // See more at https://www.chromium.org/security-keys
+    req.attestation = "direct";
+
     u2f.register(req.appId, [req], [], registered, 60);
   });
 }
