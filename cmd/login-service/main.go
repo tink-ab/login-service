@@ -268,12 +268,23 @@ func createToken(c context.Context, s *session.LoginSession) {
 		return
 	}
 
+	var expiryTime time.Time
+
+	// Prolong the session for the dashboard user
+	if s.Email == "<PLACEHOLDER>" {
+		log.Printf("Prolonging session for dashboard user...")
+		hours := 336 // 2w
+		expiryTime = clock.Now().Add(time.Hour * time.Duration(hours))
+	} else {
+		expiryTime = clock.Now().Add(settings.TokenTTL)
+	}
+
 	v := base64.URLEncoding.EncodeToString(cookie)
 	hc := http.Cookie{
 		Name:     "Token-" + s.Domain,
 		Path:     "/",
 		Value:    v,
-		Expires:  clock.Now().Add(settings.TokenTTL),
+		Expires:  expiryTime,
 		Secure:   true,
 		HttpOnly: true,
 		Domain:   settings.CookieDomain}
