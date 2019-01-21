@@ -1,5 +1,8 @@
 cookiedomain: .mycorp.io
 tokenttl: 20h
+usertokenttls:
+  # User-specific TTLs -- will override tokenttl
+  privileged.user@mycorp.io: 336h  # 2 weeks
 defaulttokenprovider: simple
 loginsessionttl: 5m
 allowedredirectdomain: .mycorp.io
