@@ -90,6 +90,9 @@ type Settings struct {
 
 	DefaultGroupPassthroughDelimiter string
 	Domains map[string]DomainInfo
+
+	// User-specific TTLs
+	UserTokenTTLs map[string]time.Duration
 }
 
 type Time struct{}
@@ -268,12 +271,21 @@ func createToken(c context.Context, s *session.LoginSession) {
 		return
 	}
 
+	var expiryTime time.Time
+
+	if duration, ok := settings.UserTokenTTLs[s.Email]; ok {
+		log.Printf("%s: Assigning user-specific TTL of %s", s.Email, duration)
+		expiryTime = clock.Now().Add(duration)
+	} else {
+		expiryTime = clock.Now().Add(settings.TokenTTL)
+	}
+
 	v := base64.URLEncoding.EncodeToString(cookie)
 	hc := http.Cookie{
 		Name:     "Token-" + s.Domain,
 		Path:     "/",
 		Value:    v,
-		Expires:  clock.Now().Add(settings.TokenTTL),
+		Expires:  expiryTime,
 		Secure:   true,
 		HttpOnly: true,
 		Domain:   settings.CookieDomain}
