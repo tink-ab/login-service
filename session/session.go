@@ -20,7 +20,7 @@ import (
 	"encoding/base64"
 	"errors"
 	"fmt"
-	log "github.com/Sirupsen/logrus"
+	log "github.com/sirupsen/logrus"
 	"net/http"
 	"net/url"
 	"strings"

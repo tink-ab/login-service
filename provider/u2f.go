@@ -17,7 +17,7 @@ package provider
 
 import (
 	"errors"
-	log "github.com/Sirupsen/logrus"
+	log "github.com/sirupsen/logrus"
 	"net/http"
 
 	"github.com/tink-ab/login-service/context"
