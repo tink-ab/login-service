@@ -18,7 +18,7 @@ package token
 import (
 	"encoding/json"
 	"errors"
-	log "github.com/Sirupsen/logrus"
+	log "github.com/sirupsen/logrus"
 	"time"
 
 	"github.com/tink-ab/login-service/session"

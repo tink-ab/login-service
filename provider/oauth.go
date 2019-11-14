@@ -19,7 +19,7 @@ import (
 	"encoding/json"
 	"errors"
 	"io/ioutil"
-	log "github.com/Sirupsen/logrus"
+	log "github.com/sirupsen/logrus"
 	"net/http"
 
 	"github.com/tink-ab/login-service/context"
